@@ -1,0 +1,121 @@
+{% extends "hotelapp/base.html" %} {% load static %} {% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+    <style>
+        /* about page css */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .head-bg {
+            background: url('../images/background.jpg');
+            color: white;
+            text-align: center;
+            padding-bottom: 4em;
+            background-position: 92% 70%;
+        }
+        /* .head-bg section {
+    width: 55%;
+} */
+        
+        header {
+            padding: 1em 0;
+        }
+        
+        section {
+            margin: 0 1rem;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            /* margin: 2px 50px 0 100px; */
+            margin-right: 900px;
+            margin-top: -10px;
+        }
+        
+        h1 span {
+            text-transform: uppercase;
+            font-size: 2rem;
+            display: block;
+        }
+        
+        header a img {
+            width: 70px;
+            float: left;
+        }
+        
+        .img-about img {
+            height: 250px;
+            width: 400px;
+            float: left;
+            padding: 20px;
+        }
+        
+        .img-about p {
+            font-weight: 400;
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+        .img-about {
+            padding: 2em;
+        }
+        
+        .img2-about img {
+            height: 400px;
+            width: 700px;
+            float: right;
+            padding: 20px;
+        }
+        
+        .img2-about p {
+            font-weight: 400;
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+        .head-about h1 {
+            padding: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="head-about">
+        <h1>about us</h1>
+
+    </div>
+
+    <hr>
+    <div class="img-about">
+        <img src="{% static 'images/anshu-a-LDm_O28w34w-unsplash.jpg' %}" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque ex porro modi praesentium laborum asperiores nam dolor molestiae? Consequatur ea atque, fuga, magni culpa repudiandae excepturi, omnis molestias fugit exercitationem
+            laudantium. Dolor soluta, beatae commodi, in obcaecati, reiciendis iusto quaerat voluptas ab ut nisi perferendis! Autem dolor explicabo veniam corporis quia at, quo labore, placeat ipsa cupiditate tempore quos nihil ex qui quasi aspernatur
+            nostrum doloremque minus unde ullam fugit, recusandae repellat. Ullam iusto facilis voluptatum at odit expedita!</p>
+    </div>
+
+
+    <div class="img2-about">
+        <img src="{% static 'images/madmax-chef-Zfpa8iH5ZkU-unsplash.jpg' %}" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque ex porro modi praesentium laborum asperiores nam dolor molestiae? Consequatur ea atque, fuga, magni culpa repudiandae excepturi, omnis molestias fugit exercitationem
+            laudantium. Dolor soluta, beatae commodi, in obcaecati, reiciendis iusto quaerat voluptas ab ut nisi perferendis! Autem dolor explicabo veniam corporis quia at, quo labore, placeat ipsa cupiditate tempore quos nihil ex qui quasi aspernatur
+            nostrum doloremque minus unde ullam fugit, recusandae repellat. Ullam iusto facilis voluptatum at odit expedita!</p>
+    </div>
+</body>
+{% endblock content %}

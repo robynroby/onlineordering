@@ -1,0 +1,60 @@
+ {% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirikisho homepage</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/checkout.css' %}"> -->
+
+</head>
+
+<body>
+
+
+
+    <div class="topnav" id="myTopnav">
+        <nav>
+            <a href="{% url 'cart' %}"> <i class="fa fa-shopping-cart"></i></a>
+            <a href="{% url 'contacts' %}">Contact</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'hotelapp' %}" class="active">Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>   </a>
+            <img src="{% static 'images/canera.png' %}" alt="">
+        </nav>
+    </div>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+    {% block content %} {% endblock content %}
+
+    <script>
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function() {
+            const offset = window.pageYOffset;
+
+            if (offset > 0) {
+                nav.classList.add('scroll')
+
+            } else {
+                nav.classList.remove('scroll')
+            }
+
+        });
+    </script>
+</body>
+
+</html>

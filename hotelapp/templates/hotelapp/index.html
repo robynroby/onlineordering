@@ -1,0 +1,107 @@
+ {% extends "hotelapp/base.html" %} {% load static %} {% block content %}
+
+<div class="head-bg">
+
+
+
+    <section>
+        <h1><span>Shirikisho Online</span>Food Delivery</h1>
+
+
+        <div class="search-bar">
+            <input type="text" name="search" id="search" placeholder="search.....">
+        </div>
+
+        <div class="form-container">
+            <form action="">
+                <div class="form-left">
+                    <label for="food">Enter the type of food:</label>
+                    <!-- <p>Example:fried chicken,sandwich.....</p> -->
+                    <textarea name="type something...." id="" cols="40" rows="6"></textarea>
+
+                </div>
+
+                <input type="button" value="Place Order">
+
+            </form>
+        </div>
+
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- food categories section -->
+
+
+<div class="food-selection">
+
+    <h1>Available Food</h1>
+
+    <hr>
+
+    <section>
+        {% for product in products %}
+        <div class="image"><img src="{{product.imageURL}}" alt="">
+            <h4>Ksh {{product.price|floatformat:2}}</h4>
+            <p><strong>{{product.name}}</strong></p>
+
+            <a href="{% url 'cart' %}"><input type="button" name="ADD TO CART" value="ADD TO CART" id="addtocart"></a>
+
+        </div>
+        {% endfor %}
+    </section>
+
+</div>
+
+
+<!-- website footer section -->
+
+
+<footer class="site-footer">
+    <div class="container1">
+        <div class="row1">
+
+            <h6>About</h6>
+            <p class="text-justify">Shirikishodeliveryservices.org <i>FOOD SERVED IS  SIMPLE AND DELICIOUS </i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aspernatur atque vel quaerat delectus odit ipsum nobis nesciunt neque. Blanditiis cumque necessitatibus
+                illum sequi consequuntur vitae, ducimus eaque recusandae. Qui?</p>
+
+            <hr>
+
+            <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container1">
+        <div class="row1">
+
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                <a href="#">Shirikisho delivery</a>.
+            </p>
+
+
+
+            <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+
+{% endblock content %}
